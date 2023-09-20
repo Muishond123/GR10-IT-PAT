@@ -1,0 +1,42 @@
+unit FormAdmin;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ComCtrls, pngimage, ExtCtrls, Buttons, jpeg;
+
+type
+  TfrmAdmin = class(TForm)
+    imgAgtergrond: TImage;
+    lblMuishond: TLabel;
+    bbnTerug: TBitBtn;
+    pnlAdminSignIn: TPanel;
+    lblInstruksie: TLabel;
+    lblWagwoord: TLabel;
+    lblNaam: TLabel;
+    imgToeOog: TImage;
+    edtWagwoord: TEdit;
+    edtNaam: TEdit;
+    redAdmin: TRichEdit;
+    lblInfo: TLabel;
+    lblAdmin: TLabel;
+    lblAdmin2: TLabel;
+    bbnUit: TBitBtn;
+    pnlAdmin: TPanel;
+    imgOopOog: TImage;
+    pnlKontroleer2: TPanel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmAdmin: TfrmAdmin;
+
+implementation
+
+{$R *.dfm}
+
+end.

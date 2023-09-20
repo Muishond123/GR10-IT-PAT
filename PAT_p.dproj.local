@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/08/14 11:57:11.738.pas,C:\Users\User\Documents\RAD Studio\Projects\Unit1.pas=C:\Users\User\Desktop\Gr10 PAT\Program\PAT_u.pas</Transaction>
+    <Transaction>2021/08/14 11:57:11.738.dfm,C:\Users\User\Documents\RAD Studio\Projects\Unit1.dfm=C:\Users\User\Desktop\Gr10 PAT\Program\PAT_u.dfm</Transaction>
+    <Transaction>2021/08/14 11:57:19.264.dproj,C:\Users\User\Documents\RAD Studio\Projects\Project1.dproj=C:\Users\User\Desktop\Gr10 PAT\Program\PAT_p.dproj</Transaction>
+    <Transaction>2021/08/14 12:14:10.349.pas,C:\Users\User\Desktop\Gr10 PAT\Program\Unit3.pas=C:\Users\User\Desktop\Gr10 PAT\Program\Forms\FormGebruiker.pas</Transaction>
+    <Transaction>2021/08/14 12:14:10.349.dfm,C:\Users\User\Desktop\Gr10 PAT\Program\Unit3.dfm=C:\Users\User\Desktop\Gr10 PAT\Program\Forms\FormGebruiker.dfm</Transaction>
+    <Transaction>2021/08/14 12:14:51.663.pas,C:\Users\User\Desktop\Gr10 PAT\Program\Unit2.pas=C:\Users\User\Desktop\Gr10 PAT\Program\Forms\FormAdmin.pas</Transaction>
+    <Transaction>2021/08/14 12:14:51.663.dfm,C:\Users\User\Desktop\Gr10 PAT\Program\Unit2.dfm=C:\Users\User\Desktop\Gr10 PAT\Program\Forms\FormAdmin.dfm</Transaction>
+    <Transaction>2021/10/22 12:22:20.215.txt,E:\Hanre Delport\IT PAT GR10\New1.txt=E:\Hanre Delport\IT PAT GR10\UsernamesEnPasword.txt</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Forms"/>
+    <File Path="Forms\FormAdmin.pas"/>
+    <File Path="Forms\FormAdmin.dfm"/>
+    <File Path="Forms\FormGebruiker.pas"/>
+    <File Path="Forms\FormGebruiker.dfm"/>
+    <File Path="PAT_u.pas"/>
+    <File Path="PAT_u.dfm"/>
+    <File Path="UsernamesEnPasword.txt"/>
+  </ProjectSortOrder>
+</BorlandProject>

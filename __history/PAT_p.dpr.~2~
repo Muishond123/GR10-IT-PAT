@@ -1,0 +1,18 @@
+program PAT_p;
+
+uses
+  Forms,
+  PAT_u in 'PAT_u.pas' {Form1},
+  FormAdmin in 'Forms\FormAdmin.pas' {Form3},
+  FormGebruiker in 'Forms\FormGebruiker.pas' {Form2};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TForm2, Form2);
+  Application.Run;
+end.

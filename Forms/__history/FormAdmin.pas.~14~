@@ -1,0 +1,115 @@
+unit FormAdmin;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ComCtrls, pngimage, ExtCtrls, Buttons, jpeg;
+
+type
+  TfrmAdmin = class(TForm)
+    imgAgtergrond: TImage;
+    lblMuishond: TLabel;
+    bbnTerug: TBitBtn;
+    pnlAdminSignIn: TPanel;
+    lblInstruksie: TLabel;
+    lblWagwoord: TLabel;
+    lblNaam: TLabel;
+    edtWagwoord: TEdit;
+    edtNaam: TEdit;
+    redAdmin: TRichEdit;
+    lblInfo: TLabel;
+    lblAdmin: TLabel;
+    lblAdmin2: TLabel;
+    bbnUit: TBitBtn;
+    pnlAdmin: TPanel;
+    pnlKontroleer2: TPanel;
+    imgOog: TImage;
+    procedure bbnUitClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure bbnTerugClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure pnlKontroleer2Click(Sender: TObject);
+    procedure imgOogMouseUp(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmAdmin: TfrmAdmin;
+  const
+  sAdmin='Frontman';
+  sWagwoord='ADTheB@$$';
+
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmAdmin.bbnTerugClick(Sender: TObject);
+begin
+redAdmin.lines.clear;
+end;
+
+procedure TfrmAdmin.bbnUitClick(Sender: TObject);
+begin
+Application.Terminate;
+end;
+
+procedure TfrmAdmin.FormCreate(Sender: TObject);
+begin
+pnlAdmin.Hide; //Steek paneel gebruiker weg
+pnlAdminSignIn.Show; //Wys paneel gebruikersnaam
+end;
+
+procedure TfrmAdmin.FormShow(Sender: TObject);
+begin
+ redAdmin.Lines.LoadFromFile('IntekenLeêr.txt'); //vertoon alle teks in die "IntekenLeêr.txt"
+end;
+
+procedure TfrmAdmin.imgOogMouseUp(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+begin
+  edtWagwoord.PasswordChar:='*'; //sal die wagwoord onsigbaar wees
+  imgOog.Picture.LoadFromFile('Hide Password.png'); //n foto van n oop oog wys
+end;
+
+procedure TfrmAdmin.pnlKontroleer2Click(Sender: TObject);
+begin
+if (edtNaam.Text=sAdmin)and (edtWagwoord.Text=sWagwoord) then  //As die gebruiker die regte naam en wagwoord tik sal:
+ begin
+ pnlAdminSignIn.Hide;  //die gebruikersnaam paneel weggesteek word en
+ pnlAdmin.Show; //die gebruiker paneel sal gewys word
+end
+else
+  if Not(edtNaam.Text='') and not (edtNaam.Text=sAdmin) then
+begin
+  ShowMessage('Die gebruikersnaam verkeerd');//n boodskap wys wat se dat die gebruikersnaam verkeerd is
+  edtNaam.SetFocus;
+end;
+
+ if Not(edtWagwoord.Text='') and not (edtWagwoord.Text=sWagwoord) then
+begin
+  ShowMessage('Die wagwoord is verkeerd');//n boodskap wys wat se dat die wagwoord verkeerd is
+  edtWagwoord.SetFocus;
+end;
+
+
+ if (edtNaam.Text='') then //as die gebruiker nie sy gebruikersnaam  invul nie sal:
+ begin
+ showmessage ('vul asseblief u gebruikersnaam in'); //n boodskap verskyn wat se dat hy dit moet invul
+ edtNaam.SetFocus; //die muis outomaties op die gebruikersnaam teks boks wees
+ end ;
+
+  if (edtWagwoord.Text='') then //as die gebruiker nie sy wagwoord invul nie sal:
+ begin
+ showmessage ('vul asseblief u wagwoord in'); //n boodskap verskyn wat se dat hy dit moet invul
+ edtWagwoord.SetFocus; //die muis outomaties op die gebruikersnaam teks boks wees
+ end;
+
+end;
+
+end.

@@ -1,0 +1,61 @@
+unit FormAdmin;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ComCtrls, pngimage, ExtCtrls, Buttons, jpeg;
+
+type
+  TfrmAdmin = class(TForm)
+    imgAgtergrond: TImage;
+    lblMuishond: TLabel;
+    bbnTerug: TBitBtn;
+    pnlAdminSignIn: TPanel;
+    lblInstruksie: TLabel;
+    lblWagwoord: TLabel;
+    lblNaam: TLabel;
+    imgToeOog: TImage;
+    edtWagwoord: TEdit;
+    edtNaam: TEdit;
+    redAdmin: TRichEdit;
+    lblInfo: TLabel;
+    lblAdmin: TLabel;
+    lblAdmin2: TLabel;
+    bbnUit: TBitBtn;
+    pnlAdmin: TPanel;
+    imgOopOog: TImage;
+    pnlKontroleer2: TPanel;
+    procedure bbnUitClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure bbnTerugClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmAdmin: TfrmAdmin;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmAdmin.bbnTerugClick(Sender: TObject);
+begin
+redAdmin.lines.clear;
+end;
+
+procedure TfrmAdmin.bbnUitClick(Sender: TObject);
+begin
+Application.Terminate;
+end;
+
+procedure TfrmAdmin.FormShow(Sender: TObject);
+begin
+
+ redAdmin.Lines.LoadFromFile('IntekenLeêr.txt');
+end;
+
+end.

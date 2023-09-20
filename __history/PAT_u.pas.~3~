@@ -1,0 +1,38 @@
+unit PAT_u;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, jpeg, ExtCtrls, StdCtrls, Buttons, GIFImg,FormGebruiker;
+
+type
+  TfrmWelkom = class(TForm)
+    imgAgtergrond: TImage;
+    lblMuishondProtection: TLabel;
+    lblWelkom: TLabel;
+    pnlWekom: TPanel;
+    bbnGaanUit: TBitBtn;
+    pnlGebruiker: TPanel;
+    pnlAdmin: TPanel;
+    procedure pnlGebruikerClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmWelkom: TfrmWelkom;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmWelkom.pnlGebruikerClick(Sender: TObject);
+begin
+  frmWelkom.Hide;
+  frmGebruiker.Show;
+end;
+
+end.
